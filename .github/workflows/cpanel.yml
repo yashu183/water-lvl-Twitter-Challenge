@@ -24,6 +24,6 @@ jobs:
     - name: 📂 Deploy to CPanel
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.yashu.fun
+        server: 3.86.232.9
         username: yashu-github
         password: 1605150155@Yashu
