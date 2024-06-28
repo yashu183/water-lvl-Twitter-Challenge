@@ -8,6 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <h1 className='text-center text-white text-2xl w-full mt-40'>Background color and This text is added to test CI/CD</h1>
   </React.StrictMode>
 );
 
