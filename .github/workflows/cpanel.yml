@@ -27,3 +27,5 @@ jobs:
         server: 3.86.232.9
         username: yashu-github
         password: X%Md79vXuLl+
+        protocol: ftps
+        port: 21
