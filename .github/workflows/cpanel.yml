@@ -11,14 +11,15 @@ jobs:
     - name: 🚚 Get Latest Code
       uses: actions/checkout@v3
 
-    - name: 📦 Install Packages
+    - name: setup Node Version
     - uses: actions/setup-node@v3
       with:
         node-version: 18
-    - run: npm i
       
-    - name: 🔨 Build
-      run: npm run build
+    - name: 🔨 Build and 📦 Install Packages
+      run: |
+        npm i
+        npm run build
     
     - name: 📂 Deploy to CPanel
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
