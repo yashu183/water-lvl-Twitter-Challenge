@@ -1,0 +1,28 @@
+on: 
+  push:
+    branches:
+      - main
+name: Publish Website
+jobs:
+  web-deploy:
+    name: 🚀 Deploy Website Every Commit
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get Latest Code
+      uses: actions/checkout@v3
+
+    - name: 📦 Install Packages
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - run: npm i
+      
+    - name: 🔨 Build
+      run: npm run build
+    
+    - name: 📂 Deploy to CPanel
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ftp.yashu.fun
+        username: yashu
+        password: 1605150155@Yashu
