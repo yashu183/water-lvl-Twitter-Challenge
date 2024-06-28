@@ -25,5 +25,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.yashu.fun
-        username: yashu
+        username: yashu-github
         password: 1605150155@Yashu
