@@ -20,12 +20,13 @@ jobs:
       run: |
         npm i
         npm run build
+        pwd
+        cd ./build
+        pwd
     
     - name: 📂 Deploy to CPanel
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: 3.86.232.9
-        username: yashu-github
-        password: X%Md79vXuLl+
-        protocol: ftps
-        port: 21
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
